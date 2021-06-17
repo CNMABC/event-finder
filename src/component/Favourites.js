@@ -1,13 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+// import axios from 'axios'
+import axios from 'axios'
+
 
 const Favourites = () => {
 
-  const [displayFavourites, setDisplayFavourites] = useState('')
-  const [hasError, setHasError] = useState(false)
+  const [getEvents, setEvents] = useState([])
+  // const [displayFavourites, setDisplayFavourites] = useState('')
+  // const [hasError, setHasError] = useState(false)
 
-  console.log(setDisplayFavourites)
-  console.log(setHasError)
+  // const pullFromLocalStroage = () =>{
+  //   localStorage.getItems()
+  // }
 
+  // pullFromLocalStroage()
+  
+  useEffect(() => {
+    const getData = async () => {
+      const apiKey = 'gCK1UZiAtKeL5bTCeol9GN91BXQYtQFa'
+      const { data } = await axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&countryCode=GB&apikey=${apiKey}`)
+      setEvents(data._embedded.events)
+    }
+    getData()
+  }, [])
+
+  console.log(getEvents)
 
 
 

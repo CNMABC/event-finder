@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Modal from 'react-bootstrap/Modal'
 // import Button from 'react-bootstrap/Button'
+import CardComp from './CardComp'
 import axios from 'axios'
 
 const Home = () => {
@@ -36,8 +37,7 @@ const Home = () => {
     setShow(true)
   }
 
-
-
+  console.log(getSingleShow)
 
   return (
     <>
@@ -50,13 +50,18 @@ const Home = () => {
               <div className="container">
                 <div className="row">
                   <div className="col">
-                    Column
+                    <p>{ite.pleaseNote}</p>
                   </div>
                   <div className="col">
                     Column
                   </div>
                   <div className="col">
                     <img id="img-modal" src={ite.images[2].url} alt={ite.name} />
+                  </div>
+                  <div className="row">
+                    <div className="col">
+                      <p>{ite.ticketLimite}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -72,19 +77,15 @@ const Home = () => {
         <div className="container-fluid">
           <div className="row flex-row flex-wrap">
             {getEvents.map(ite =>
-              <div className="col-3" key={ite.id}>
-                <div className="card">
-                  <img onClick={showModal} className="card-img-top" src={ite.images[2].url} alt="Card image cap" id={ite.id} />
-                  <div className="card-body">
-                    <h5 className="card-title">{ite.name}</h5>
-                    <p className="card-text">{ite.dates.start.localDate}</p>
-                    <p className="card-text">{ite._embedded.venues[0].name}</p>
-                  </div>
-                  <div className="card-footer">
-                    <a className="btn btn-danger"><i className="far fa-heart" id={ite.id}></i></a>
-                  </div>
-                </div>
-              </div>
+              <CardComp
+                key={ite.id}
+                name={ite.name}
+                id={ite.id}
+                image={ite.images[2].url}
+                showModal={showModal}
+                venue={ite._embedded.venues[0].name}
+                date={ite.dates.start.localDate}
+              />
             )}
           </div>
         </div>
