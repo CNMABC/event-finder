@@ -12,12 +12,12 @@ const App = () => {
 
         <Switch>
 
-          <Route>
-            <Favourites path= "/favourites"/>
+          <Route path="/favourites">
+            <Favourites />
           </Route>
 
-          <Route>
-            <Home path="/" />
+          <Route path="/" >
+            <Home />
           </Route>
 
         </Switch>
