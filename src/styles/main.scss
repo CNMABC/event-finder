@@ -1,4 +1,14 @@
 .wrapper {
+  margin-top: 30px;
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.wrapper-2 {
   margin-top: 50px;
   min-height: 70vh;
   display: flex;
@@ -42,4 +52,15 @@ a.btn {
   border-radius: 200px;
   font-size: 16px;
   margin-left: 275px;
+}
+
+//! Modal
+
+#modal-wrapper{
+  width: 600px;
+  height: 700px;
+}
+
+#img-modal {
+  width: 100%;
 }
