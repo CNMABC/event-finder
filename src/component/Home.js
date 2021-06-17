@@ -56,7 +56,7 @@ const Home = () => {
                     Column
                   </div>
                   <div className="col">
-                    <img id="img-modal" src={ite.images[2].url} alt={ite.name} />
+                    <img id="img-modal" src={ite.images[3].url} alt={ite.name} />
                   </div>
                   <div className="row">
                     <div className="col">
@@ -74,7 +74,7 @@ const Home = () => {
           </Modal>
         )}
 
-        <div className="container-fluid">
+        <div className="container">
           <div className="row flex-row flex-wrap">
             {getEvents.map(ite =>
               <CardComp

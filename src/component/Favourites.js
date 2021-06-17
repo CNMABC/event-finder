@@ -30,7 +30,7 @@ const Favourites = () => {
 
   return (
     <div className="wrapper">
-      <h1>Your favourites</h1>
+      <h1 className="titleFavourite">Your favourites</h1>
     </div>
   )
 }
