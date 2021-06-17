@@ -53,14 +53,13 @@ const Home = () => {
                     <p>{ite.pleaseNote}</p>
                   </div>
                   <div className="col">
-                    Column
                   </div>
                   <div className="col">
                     <img id="img-modal" src={ite.images[3].url} alt={ite.name} />
                   </div>
                   <div className="row">
                     <div className="col">
-                      <p>{ite.ticketLimite}</p>
+                      {ite.ticketLimite}
                     </div>
                   </div>
                 </div>
@@ -69,8 +68,9 @@ const Home = () => {
 
 
             </Modal.Body>
-            {/* <Modal.Footer>
-            </Modal.Footer> */}
+            <Modal.Footer>
+              <a href={ite.url} rel="noreferrer "target="_blank"><i className="fas fa-ticket-alt"></i></a>
+            </Modal.Footer>
           </Modal>
         )}
 
