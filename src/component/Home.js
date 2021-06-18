@@ -74,18 +74,20 @@ const Home = () => {
         )}
 
         <div className="container">
-          <div className="row flex-row flex-wrap">
-            {getEvents.map(ite =>
-              <CardComp
-                key={ite.id}
-                name={ite.name}
-                id={ite.id}
-                image={ite.images[2].url}
-                showModal={showModal}
-                venue={ite._embedded.venues[0].name}
-                date={ite.dates.start.localDate}
-              />
-            )}
+          <div className="scroll">
+            <div className="row flex-row flex-nowrap">
+              {getEvents.map(ite =>
+                <CardComp
+                  key={ite.id}
+                  name={ite.name}
+                  id={ite.id}
+                  image={ite.images[2].url}
+                  showModal={showModal}
+                  venue={ite._embedded.venues[0].name}
+                  date={ite.dates.start.localDate}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
