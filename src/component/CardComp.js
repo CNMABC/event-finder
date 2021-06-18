@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
-const CardComp = ( { image, id, name, venue, date, showModal } ) => {
-  const [localStorageItem, setLocalStorageItem] = useState('')
-
-  useEffect(() => {
-    localStorage.setItem('EventID', localStorage)
-  }, [localStorageItem])
+const CardComp = ( { image, id, name, venue, date, showModal, localStorageItem, setLocalStorageItem } ) => {
+  const [heart, setHeart] = useState(false)
 
   const saveEventIDToLocalStorage = e => {
-    const eventID = e.target.id
-    setLocalStorageItem(eventID)
-    // localStorage.setItem('eventID', JSON.stringify(items))
-    // localStorage.setItem('eventID', eventID)
+    setHeart(true)
+    const newLocalStorageItems = [...localStorageItem, e.target.id]
+    console.log('new', newLocalStorageItems)
+    setLocalStorageItem(newLocalStorageItems)
+    localStorage.setItem('EventID', JSON.stringify(newLocalStorageItems))
+    getItem()
   }
 
-  console.log(localStorageItem)
+  const getItem = () => {
+    const item = localStorage.getItem('EventID')
+    console.log('ITEM', JSON.parse(item))
+  }
 
 
 
@@ -28,7 +29,7 @@ const CardComp = ( { image, id, name, venue, date, showModal } ) => {
           <p className="card-text">{venue}</p>
         </div>
         <div className="card-footer">
-          <i onClick={saveEventIDToLocalStorage} className="far fa-heart" id={id}></i>
+          <i onClick={saveEventIDToLocalStorage} className={ !heart ? 'far fa-heart' : 'fas fa-heart' } id={id}></i>
         </div>
       </div>
     </div>
@@ -36,3 +37,5 @@ const CardComp = ( { image, id, name, venue, date, showModal } ) => {
 }
 
 export default CardComp
+
+// far fa-heart

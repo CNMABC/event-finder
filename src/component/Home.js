@@ -9,6 +9,7 @@ const Home = () => {
   const [modalID, setModalID] = useState('')
   const [getSingleShow, setSingleShow] = useState([])
   const [show, setShow] = useState(false)
+  const [localStorageItem, setLocalStorageItem] = useState([])
   const handleClose = () => setShow(false)
 
   useEffect(() => {
@@ -41,7 +42,7 @@ const Home = () => {
 
   return (
     <>
-      <h1 className="DiscoverHeading">Discover a new event</h1>
+      <h1 className="DiscoverHeading">Discover a new event<span className="dots"> ...</span> </h1>
       <div className="wrapper">
 
         {getSingleShow.map(ite =>
@@ -56,8 +57,8 @@ const Home = () => {
                   <div className="card-body">
                     <p className="card-location"><strong>{ite._embedded.venues[0].city.name}</strong></p>
                     <p className="card-status"><strong>{ite.dates.status.code}</strong></p>
-                    <p className="card-text">{ite.ticketLimite}</p>
-                    <p className="card-text">{ite._embedded.venues[0].boxOfficeInfo.willCallDetail}</p>
+                    {/* <p className="card-text">{!ite.ticketLimite ? '' : ite.ticketLimite}</p> */}
+                    { ite._embedded.venues[0].boxOfficeInfo.willCallDetail === undefined ? <p></p> : <p className="card-text">{ite._embedded.venues[0].boxOfficeInfo.willCallDetail}</p> }
                     <p className="card-text">{ite._embedded.venues[0].generalInfo.generalRule}</p>
                   </div>
                 </div>
@@ -85,6 +86,8 @@ const Home = () => {
                   showModal={showModal}
                   venue={ite._embedded.venues[0].name}
                   date={ite.dates.start.localDate}
+                  localStorageItem={localStorageItem}
+                  setLocalStorageItem={setLocalStorageItem}
                 />
               )}
             </div>
