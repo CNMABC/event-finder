@@ -12,7 +12,7 @@ const Navigation = () => {
           <ul className="navbar-nav">
             {/* //! Favourites Button */}
             <li className="nav-item active">
-              <Link to="/favourites" className="nav-link"> Favourites <i className="fas fa-heart"></i> <span className="sr-only">(current)</span></Link>
+              <Link to="/favourites" className="nav-link" id="fav-btn"> Favourites <i className="fas fa-heart"></i> <span className="sr-only">(current)</span></Link>
             </li>
           </ul>
         </div>

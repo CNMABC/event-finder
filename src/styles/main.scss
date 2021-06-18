@@ -80,10 +80,11 @@ a {
   padding: 3rem;
   // white-space: nowrap;
   width: 100%;
+  -webkit-scrollbar { width: 0 !important }
 }
 
 .fa-heart {
-  color: #F93CC4;
+  color: #F793DB;
   transition: 0.8s;
 }
 
