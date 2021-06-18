@@ -41,6 +41,7 @@ const Home = () => {
 
   return (
     <>
+      <h1 className="DiscoverHeading">Discover a new adventure</h1>
       <div className="wrapper">
 
         {getSingleShow.map(ite =>
@@ -48,19 +49,16 @@ const Home = () => {
             <Modal.Body>
               <Modal.Title className="modal-title">{ite.name}</Modal.Title>
               <div className="container">
-                <div className="row">
-                  <div className="col">
-                    <p>{ite.pleaseNote}</p>
-                  </div>
-                  <div className="col">
-                  </div>
-                  <div className="col">
-                    <img id="img-modal" src={ite.images[3].url} alt={ite.name} />
-                  </div>
-                  <div className="row">
-                    <div className="col">
-                      {ite.ticketLimite}
-                    </div>
+                <div className="card-modal">
+                  <img className="card-img-top" src={ite.images[2].url} alt="Card image cap" />
+                  <p className="card-text-image">{ite._embedded.venues[0].name}</p>
+                  <p className="card-text-date">{ite.classifications[0].genre.name}</p>
+                  <div className="card-body">
+                    <p className="card-location"><strong>{ite._embedded.venues[0].city.name}</strong></p>
+                    <p className="card-status"><strong>{ite.dates.status.code}</strong></p>
+                    <p className="card-text">{ite.ticketLimite}</p>
+                    <p className="card-text">{ite._embedded.venues[0].boxOfficeInfo.willCallDetail}</p>
+                    <p className="card-text">{ite._embedded.venues[0].generalInfo.generalRule}</p>
                   </div>
                 </div>
               </div>
@@ -69,7 +67,8 @@ const Home = () => {
 
             </Modal.Body>
             <Modal.Footer>
-              <a href={ite.url} rel="noreferrer "target="_blank"><i className="fas fa-ticket-alt"></i></a>
+              <a href={ite.url} rel="noreferrer " target="_blank"><i className="fas fa-ticket-alt"></i></a>
+
             </Modal.Footer>
           </Modal>
         )}
@@ -95,3 +94,15 @@ const Home = () => {
 }
 
 export default Home
+
+
+// Title = {ite.name}
+// Image = {ite.images[3].url}
+// Location
+// Genre = {classifications[0].genre.name}
+// Date
+// Ticket Info = {ite.ticketLimite}
+// Promoters = {promoters[0].name}
+// Price Range = {priceRanges[0].currency}
+// Price Range = {priceRanges[0].min}
+// Price Range = {priceRanges[0].max}

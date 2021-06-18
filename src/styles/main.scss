@@ -11,6 +11,13 @@
   font-family:'Sansita', sans-serif;
 }
 
+.DiscoverHeading {
+  font-family:'Sansita', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
 .wrapper {
   margin-top: 30px;
   min-height: 5vh;
@@ -52,6 +59,16 @@ a {
   margin: 0 5px 100px 5px;
 }
 
+.fa-heart {
+  color: red;
+  transition: 0.8s;
+}
+
+.fa-heart:hover {
+  transform: scale(1.3);
+  color: rgb(187, 0, 0);
+}
+
 .card:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -73,8 +90,50 @@ a.btn {
   width: 100%;
 }
 
+.modal-title {
+  text-align: center;
+  padding: 20px;
+}
+
+.card-text-image {
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.card-text-date{
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+// .card-location {
+  
+// }
+
+.card-status {
+  margin-top: -15px;
+  margin-bottom: 30px;
+  color: red;
+}
+
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+div.modal-footer {
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-ticket-alt {
+  font-size: 40px;
+  transition: 0.8s;
+}
+
+.fa-ticket-alt:hover {
+  transform: scale(1.2);
 }
