@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Footer from '../images/Footer.png'
+import Branding from '../images/Branding.png'
 
 const Navigation = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container">
         {/* //! Home button */}
-        <Link to="/" className="navbar-brand"><img src ={Footer} /></Link>
+        <Link to="/" className="navbar-brand"><img src ={Branding} /></Link>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             {/* //! Favourites Button */}

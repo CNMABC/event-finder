@@ -1,10 +1,10 @@
 import React from 'react'
-import Logo from '../images/Logo.png'
+import Footer from '../images/Footer.png'
 
 const FooterPage = () => {
   return (
     <div>
-      <h1 className="logo"><img src ={Logo} /></h1>
+      <h1 className="logo"><img src ={Footer} /></h1>
     </div>
   )
 }

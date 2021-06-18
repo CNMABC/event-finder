@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const CardComp = ( { image, id, name, venue, date, showModal } ) => {
-  const [localStorageItem, setLocalStorageItem] = useState([])
+  const [localStorageItem, setLocalStorageItem] = useState('')
 
-  // eslint-disable-next-line prefer-const
+  useEffect(() => {
+    localStorage.setItem('EventID', localStorage)
+  }, [localStorageItem])
 
   const saveEventIDToLocalStorage = e => {
     const eventID = e.target.id
-    setLocalStorageItem([...localStorageItem, eventID])
+    setLocalStorageItem(eventID)
     // localStorage.setItem('eventID', JSON.stringify(items))
     // localStorage.setItem('eventID', eventID)
   }

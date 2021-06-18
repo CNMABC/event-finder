@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <>
-      <h1 className="DiscoverHeading">Discover a new adventure</h1>
+      <h1 className="DiscoverHeading">Discover a new event</h1>
       <div className="wrapper">
 
         {getSingleShow.map(ite =>
