@@ -1,6 +1,6 @@
-<h1> Eventme <h1>
+# Eventme
 
-<h2>Overview : </h2>
+<h2>Overview </h2>
 
 Eventme is a website that supports people to get back into the live music scene in London. On this website the user can find live music inspiration, favourite the ones they like and be redirected to the webpage of where the tickets are sold. This second project was a React pair-coded project with Arjun Doel and was done in the style of a 48-hour hackathon. 
 
@@ -26,13 +26,13 @@ Access the website [here](https://event-me.netlify.app/) and the repo [here](htt
 <li>Bulma</li>
 <li>SCSS</li>
 <li>React Router Dom </li> 
-<ul>DOM storage</li>
+<li>DOM storage</li>
 </ul>
-<h3>Api Used :  </h3>
-<ul>
-<li>[Ticketmaster API](https://developer.ticketmaster.com/products-and-docs/apis/getting-started/) </li>
 
-  </ul>
+<h3>Api Used :  </h3>
+
+[Ticketmaster API](https://developer.ticketmaster.com/products-and-docs/apis/getting-started)
+
 
 
 <h3>Dev tools : </h3>
@@ -54,20 +54,30 @@ As it was a pair-coded project we decided to break-up our planning accordion to 
 
 Here is an example of a ticket with 2 comments on.
 
+
 ![](images/asana-pic-2.png)
+  
 Here is an example of a ticket with 3 sub-tasks.
+  
 ![](images/asana-pic-3.png)
 
 We then went through the design process starting with user need statements, user personas, user flow, wireframes and then creation of the first MVP. Our user was a young music lover who was missing live music over the lockdown period and wanted inspiration about what was happening in and around London. They wanted something quick, trendy and easy to access which would direct them to be able to book tickets if they liked the look of the event. 
 
 This is our user flow starting the user from the homepage and mapping out the different journeys they could go on. 
+
 ![](images/miro-1.png)
+  
 Figma (below) style guide created by me.
+  
 ![](images/figma-1.png)
+  
 This is the initial homepage that users are greeted with. Users were then able to click on the heart at the bottom of the card which would then fill up and be saved through DOM storage into the favourites page. 
+  
 ![](images/figma-2.png)
 ![](images/figma-3.png)
+  
 Once an image is clicked in the carousel on the homepage a modal pops up, the background screen goes grey and you are presented with information about the event. By clicking on the ticket button at the bottom you are then redirected to the url to purchase your ticket. 
+  
 ![](images/figma-4.png)
   
 <h2>Wins</h2> 
