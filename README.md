@@ -10,10 +10,10 @@ Access the website [here](https://event-me.netlify.app/) and the repo [here](htt
 
 <h2> Brief </h2>
 <ul>
-<li>Create a React App consuming a public API</li>
-<li>Enable the app to have a router with several pages</li>
-<li>Deploy online which can be accessed by the public  </li>
-<li>Design wireframes before starting to code </li>
+<li>Create a React App consuming a public API.</li>
+<li>Enable the app to have a router with several pages.</li>
+<li>Deploy online which can be accessed by the public. </li>
+<li>Design wireframes before starting to code. </li>
 </ul>
   
 <h2>Technologies Used </h2>
@@ -48,7 +48,7 @@ Access the website [here](https://event-me.netlify.app/) and the repo [here](htt
 </ul>
 
 <h2>Approach & Planning Process</h2>
-As it was a pair-coded project we decided to break-up our planning accordion to the page or feature so we could track the detailed development of each element. According to the ticket of that task, we would add comments to it so the other person understood the stage they had left the code in. Also if that task needed to be broken down we then added sub-tasks to be completed. 
+As it was a pair-coded project we decided to break-up our planning according to the page or feature so we could track the detailed development of each element. According to the ticket of that task, we would add comments to it so the other person understood the stage they had left the code in. Also if that task needed to be broken down we then added sub-tasks to be completed. 
 
 ![](images/asana-pic-1.png)
 
